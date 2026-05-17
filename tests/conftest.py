@@ -36,6 +36,12 @@ SAMPLE_PRINTER = {
 }
 
 
+@pytest.fixture(autouse=True)
+def auto_enable_custom_integrations(enable_custom_integrations):
+    """Patch the HA loader so it discovers custom_components/ in this repo."""
+    yield
+
+
 @pytest.fixture
 def mock_api():
     api = AsyncMock()
