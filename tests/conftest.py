@@ -2,6 +2,10 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
+# Declares pytest-homeassistant-custom-component as a plugin so that
+# homeassistant is on sys.path and HA imports resolve.  We intentionally
+# do NOT use the `hass` or `enable_custom_integrations` fixtures from this
+# package — coordinator / config-flow tests supply their own minimal mocks.
 pytest_plugins = "pytest_homeassistant_custom_component"
 
 MOCK_CONFIG = {
@@ -36,10 +40,10 @@ SAMPLE_PRINTER = {
 }
 
 
-@pytest.fixture(autouse=True)
-def auto_enable_custom_integrations(enable_custom_integrations):
-    """Patch the HA loader so it discovers custom_components/ in this repo."""
-    yield
+@pytest.fixture
+def hass():
+    """Minimal hass stub — enough for DataUpdateCoordinator.__init__."""
+    return MagicMock()
 
 
 @pytest.fixture
