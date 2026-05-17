@@ -1,0 +1,55 @@
+assign_filament:
+  fields:
+    spool_id:
+      required: true
+      selector:
+        number:
+          min: 1
+          mode: box
+    printer_id:
+      required: true
+      selector:
+        number:
+          min: 1
+          mode: box
+    extruder:
+      required: false
+      default: 0
+      selector:
+        number:
+          min: 0
+          mode: box
+
+unassign_filament:
+  fields:
+    printer_id:
+      required: true
+      selector:
+        number:
+          min: 1
+          mode: box
+
+adjust_weight:
+  fields:
+    spool_id:
+      required: true
+      selector:
+        number:
+          min: 1
+          mode: box
+    weight:
+      required: true
+      selector:
+        number:
+          min: 0
+          unit_of_measurement: g
+          mode: box
+
+mark_dried:
+  fields:
+    spool_id:
+      required: true
+      selector:
+        number:
+          min: 1
+          mode: box

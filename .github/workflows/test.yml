@@ -13,7 +13,8 @@ jobs:
 
     strategy:
       matrix:
-        python-version: ["3.12", "3.13"]
+        # HA targets 3.12; 3.13 is not yet officially supported
+        python-version: ["3.12"]
 
     steps:
       - name: Checkout

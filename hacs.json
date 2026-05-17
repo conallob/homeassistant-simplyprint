@@ -1,9 +1,5 @@
 {
   "name": "SimplyPrint",
-  "domain": "simplyprint",
-  "documentation": "https://github.com/conallob/homeassistant-simplyprint",
-  "issue_tracker": "https://github.com/conallob/homeassistant-simplyprint/issues",
-  "codeowners": ["@conallob"],
   "render_readme": true,
   "homeassistant": "2024.1.0"
 }
