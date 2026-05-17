@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to SimplyPrint",
+        "description": "Enter your SimplyPrint API key and company ID. You can generate an API key under Settings → API Keys in the SimplyPrint panel. Your company ID is visible in the panel URL.",
+        "data": {
+          "api_key": "API Key",
+          "company_id": "Company ID"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to SimplyPrint. Check your network and try again.",
+      "invalid_auth": "Invalid API key. Please check your credentials.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "SimplyPrint account is already configured."
+    }
+  },
+  "services": {
+    "assign_filament": {
+      "name": "Assign Filament",
+      "description": "Assigns a filament spool to a printer extruder.",
+      "fields": {
+        "spool_id": {
+          "name": "Spool ID",
+          "description": "The numeric ID of the filament spool."
+        },
+        "printer_id": {
+          "name": "Printer ID",
+          "description": "The numeric ID of the target printer."
+        },
+        "extruder": {
+          "name": "Extruder",
+          "description": "Extruder index (0-based). Defaults to 0."
+        }
+      }
+    },
+    "unassign_filament": {
+      "name": "Unassign Filament",
+      "description": "Removes the filament assignment from a printer.",
+      "fields": {
+        "printer_id": {
+          "name": "Printer ID",
+          "description": "The numeric ID of the printer."
+        }
+      }
+    },
+    "adjust_weight": {
+      "name": "Adjust Spool Weight",
+      "description": "Sets the remaining weight on a filament spool.",
+      "fields": {
+        "spool_id": {
+          "name": "Spool ID",
+          "description": "The numeric ID of the filament spool."
+        },
+        "weight": {
+          "name": "Weight (g)",
+          "description": "The remaining weight in grams."
+        }
+      }
+    },
+    "mark_dried": {
+      "name": "Mark Filament Dried",
+      "description": "Records that a filament spool has been dried.",
+      "fields": {
+        "spool_id": {
+          "name": "Spool ID",
+          "description": "The numeric ID of the filament spool."
+        }
+      }
+    }
+  }
+}
