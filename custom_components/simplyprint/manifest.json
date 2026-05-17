@@ -1,0 +1,12 @@
+{
+  "domain": "simplyprint",
+  "name": "SimplyPrint",
+  "version": "0.1.0",
+  "config_flow": true,
+  "documentation": "https://github.com/conallob/homeassistant-simplyprint",
+  "issue_tracker": "https://github.com/conallob/homeassistant-simplyprint/issues",
+  "codeowners": ["@conallob"],
+  "requirements": [],
+  "iot_class": "cloud_polling",
+  "homeassistant": "2024.1.0"
+}
