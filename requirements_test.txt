@@ -7,4 +7,4 @@ aioresponses>=0.7.6
 # but also loads fixtures that conflict with our own mocks, so we
 # declare homeassistant directly and skip the custom-component plugin.
 homeassistant>=2024.1.0
-voluptuous>=0.13.1
+voluptuous>=0.16.0
