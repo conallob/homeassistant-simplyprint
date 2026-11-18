@@ -6,5 +6,5 @@ aioresponses>=0.7.6
 # pytest-homeassistant-custom-component brings it in as a transitive dep
 # but also loads fixtures that conflict with our own mocks, so we
 # declare homeassistant directly and skip the custom-component plugin.
-homeassistant>=2024.1.0
+homeassistant>=2026.11.1
 voluptuous>=0.13.1
